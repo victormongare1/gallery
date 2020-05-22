@@ -43,8 +43,8 @@ class Image(models.Model):
       '''
       method that shows all images in the database
       '''
-      images=cls.objects.all()
-      return images
+      pictures=cls.objects.all()
+      return pictures
 
     @classmethod
     def delete_image(self):
