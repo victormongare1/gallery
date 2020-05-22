@@ -12,3 +12,11 @@ class Image(models.Model):
     category= models.ForeignKey(Category,on_delete=models.CASCADE)
     location= models.ForeignKey(Location,on_delete=models.CASCADE)
  
+class Category(models.Model):
+    '''
+    category class to define category objects
+    '''
+    category=  category_name=models.CharField(max_length=30)
+    
+
+
