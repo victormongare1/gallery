@@ -7,5 +7,5 @@ def allPictures():
     '''
     view function to display all pictures in the application
     '''
-    pictures=
+    pictures=None
     return render(request, 'index.html', {"pictures":pictures})
