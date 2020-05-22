@@ -4,9 +4,24 @@ from .models import Image,Location,Category
 
 # Create your views here.
 
-def allPictures():
+def allPictures(request):
     '''
     view function to display all pictures in the application
     '''
     pictures= Image.display_images()
     return render(request, 'index.html', {"pictures" : pictures})
+
+def search_pictures(request):
+    '''
+    view function to display the searched pictures by category
+    '''
+    if 'category' in request.GET and request.GET["category"]:
+        search_term = request.GET.get("category")
+        searched_images = Image.search_image(search_term)
+        message = f"{search_term}"
+
+        return render(request, 'search.html',{"message":message,"searched_images": searched_images})
+
+    else:
+        message = "You haven't searched for any category"
+        return render(request, 'search.html',{"message":message})

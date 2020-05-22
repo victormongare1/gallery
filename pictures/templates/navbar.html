@@ -12,6 +12,19 @@
     <div class="navbar-header">
       <a class="navbar-brand" href="{% url 'allPictures' %}">HOME</a>
     </div>
+    <!-- locations dropdown list-->
+    <div class="dropdown">
+      <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        Locations
+      </button>
+      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+        <a class="dropdown-item" href="#">Nairobi</a>
+        <a class="dropdown-item" href="#">Mombasa</a>
+        <a class="dropdown-item" href="#">Nakuru</a>
+      </div>
+    </div>
+    <!--end dropdown list-->
+
     <!-- Adding a search form  -->
     <div class="col-sm-4 col-md-4 navbar-right">
 
@@ -27,6 +40,7 @@
       </form>
     </div>
     <!-- search form end -->
+  
   </div>
 </nav>
 </body>

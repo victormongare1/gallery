@@ -53,6 +53,14 @@ class Image(models.Model):
         '''
         cls.objects.filter(id=self.id).delete()
 
+    @classmethod
+    def search_image(cls,search_term):
+        '''
+        method that retrieves images based on their category
+        '''
+        pictures = cls.objects.filter(category__category__icontains=search_term)
+        return pictures   
+
 
 
 
