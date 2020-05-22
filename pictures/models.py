@@ -16,7 +16,13 @@ class Category(models.Model):
     '''
     category class to define category objects
     '''
-    category=  category_name=models.CharField(max_length=30)
-    
+    category = models.CharField(max_length=30)
+
+class Location(models.Model):
+    '''
+    location class to define location objects
+    '''
+    location = models.CharField(max_length=30)
+        
 
 
