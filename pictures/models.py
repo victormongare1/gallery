@@ -36,7 +36,23 @@ class Image(models.Model):
         '''
         method that saves image to database
         '''
-        self.save()    
+        self.save()
+
+    @classmethod
+    def display_images():
+      '''
+      method that shows all images in the database
+      '''
+      images=cls.objects.all()
+      return images
+
+    @classmethod
+    def delete_image(self):
+        '''
+        method that deletes image from database
+        '''
+        cls.objects.filter(id=self.id).delete()
+
 
 
 
