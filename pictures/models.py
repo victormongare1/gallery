@@ -47,11 +47,11 @@ class Image(models.Model):
       return pictures
 
     @classmethod
-    def delete_image(self):
+    def delete_image(cls,id):
         '''
         method that deletes image from database
         '''
-        cls.objects.filter(id=self.id).delete()
+        cls.objects.filter(id=id).delete()
 
     @classmethod
     def search_image(cls,search_term):
