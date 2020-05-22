@@ -7,11 +7,17 @@ class Category(models.Model):
     '''
     category = models.CharField(max_length=30)
     
+    def __str__(self):
+        return self.category
+
 class Location(models.Model):
     '''
     location class to define location objects
     '''
     location = models.CharField(max_length=30)
+
+    def __str__(self):
+        return self.location
         
 class Image(models.Model):
     '''
@@ -23,6 +29,8 @@ class Image(models.Model):
     category= models.ForeignKey(Category,on_delete=models.CASCADE)
     location= models.ForeignKey(Location,on_delete=models.CASCADE)
  
+    def __str__(self):
+        return self.name
 
 
 
