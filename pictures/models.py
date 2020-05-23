@@ -40,11 +40,11 @@ class Image(models.Model):
 
     @classmethod
     def display_images():
-      '''
-      method that shows all images in the database
-      '''
-      pictures=cls.objects.all()
-      return pictures
+        '''
+        method that shows all images in the database
+        '''
+        pictures=cls.objects.all()
+        return pictures
 
     @classmethod
     def delete_image(cls,id):
@@ -59,6 +59,14 @@ class Image(models.Model):
         method that retrieves images based on their category
         '''
         pictures = cls.objects.filter(category__category__icontains=search_term)
+        return pictures   
+
+    @classmethod
+    def filter_by_location(cls,search_term):
+        '''
+        method that rerieves images based on the location they were taken
+        '''
+        pictures = cls.objects.filter(location__location__icontains=search_term)
         return pictures   
 
 
