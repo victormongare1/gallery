@@ -32,7 +32,7 @@ def filter_location(request):
         searched_locations=Image.filter_by_location(search_term)
         message=f"{search_term}"
 
-        return render(request,'searchlocation.html',{"message":message,"locations":searched_locations})
+        return render(request,'filterlocation.html',{"message":message,"locations":searched_locations})
     else:
         message ="You haven't searched for any location"
-        return render(request,'searchlocation.html',{"message":message})
+        return render(request,'filterlocation.html',{"message":message})

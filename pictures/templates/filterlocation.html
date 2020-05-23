@@ -7,20 +7,21 @@
     </div>
 
   <div class="row">
-    {% if searched_images%}
-      <h2>Found {{ searched_images|length }} of searched term {{message}}</h2>
+    {% if locations%}
+      <h2>Found {{ locations|length }} of location {{message}}</h2>
     {% else %}
-      <h2> Found 0 images for the search term {{message}}</h2>
+      <h2> Found 0 images for the location {{message}}</h2>
     {% endif %}
 
   </div>
 
   <div class="row">
 
-  {% if searched_images %}
-    {% for image in searched_images %}
+  {% if locations %}
+    {% for image in locations %}
       <div class="col-sm-6 col-md-3">
-          <img src="{{image.picture.url}}" class="img-responsive">
+        <img src="{{image.picture.url}}" class="img-responsive">
+            
           
       </div>
     {% endfor %}

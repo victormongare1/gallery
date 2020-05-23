@@ -39,7 +39,7 @@ class Image(models.Model):
         self.save()
 
     @classmethod
-    def display_images():
+    def display_images(cls):
         '''
         method that shows all images in the database
         '''
