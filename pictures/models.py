@@ -6,6 +6,12 @@ class Category(models.Model):
     category class to define category objects
     '''
     category = models.CharField(max_length=30)
+
+    def save_category(self):
+        '''
+        method that saves category to database
+        '''
+        self.save()
     
     def __str__(self):
         return self.category
@@ -15,6 +21,12 @@ class Location(models.Model):
     location class to define location objects
     '''
     location = models.CharField(max_length=30)
+
+    def save_location(self):
+        '''
+        method that saves location to database
+        '''
+        self.save()
 
     def __str__(self):
         return self.location
