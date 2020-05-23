@@ -1,14 +1,20 @@
 # My Galllery
 
+## Description
 This is a web application to display personal pictures.Images can be searched by use of their categories.
+
 The images can also be filtered by use of the locations their were taken in
 
 ## Installing 
 
 * install a virtual environment in your local machine
+
 * run git clone (repo-url)
+
 * access it through your preferred editor
+
 * install all the necessary django extensions
+
 * run the app using python3 manage.py run
 
 ## Access
@@ -16,12 +22,20 @@ The application is accessible using https://galleryvictor.herokuapp.com
 
 ## Technologies
 Python is the main programming language that has been used in the creation of the web application '
+
 The use of the django framework has been implemented in creating various features in the application
+
 Html and css have been used in the basic layout and design of the web application
+
+Javascript was used in the implementation of the copy function to copy the link of the image
+
 git version control has been used in the managing and storing of the code for the application
 
 ## Support and contact details
 If you run into any issues or have questions, ideas or concerns  contact me at vicmongz254@gmail.com/0792651899 or make a contribution to the code at my github  account - @victormongare1.
+
+## Author 
+Victor Mongare
 
 ## License
 *{MIT License
